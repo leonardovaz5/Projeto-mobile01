@@ -1,110 +1,137 @@
 # Projeto-mobile01
 
-Histórias de Usuário – Sistema ECOM360
-1️⃣ Login do usuário
+Histórias de Usuário
+História 1: Autenticação (Login)
 
-História de Usuário
+Como morador
+Quero entrar no sistema utilizando meu e-mail e senha
+Para poder administrar minhas reservas.
 
-Como cliente da plataforma ECOM360
-Eu quero fazer login na minha conta
-Para que eu possa acessar meus pedidos e realizar compras.
+Cenário 1: Login realizado com sucesso
 
-Critérios de Aceitação
+Dado que estou na tela de login
+E informo um e-mail válido
+E digito a senha correta
+Quando pressiono o botão “Acessar”
+Então devo ser direcionado para a tela de reservas.
 
-O usuário deve informar email e senha.
+Cenário 2: Falha no login
 
-O sistema deve validar as credenciais.
+Dado que estou na tela de login
+E preencho informações inválidas
+Quando clico em “Acessar”
+Então o sistema deve exibir uma mensagem de erro.
 
-Caso estejam corretas, o usuário é direcionado para a tela inicial.
+História 2: Cadastro de Usuário
 
-Caso estejam incorretas, deve aparecer uma mensagem de erro.
+Como um novo morador
+Quero criar uma conta no sistema
+Para conseguir realizar reservas.
 
-🛒 2️⃣ Visualizar produtos
+Cenário 1: Cadastro efetuado com sucesso
 
-História de Usuário
+Dado que estou na tela de cadastro
+E preencho corretamente o e-mail, senha e confirmação de senha
+Quando clico em “Cadastrar”
+Então minha conta deve ser criada no sistema.
 
-Como cliente da plataforma
-Eu quero visualizar a lista de produtos disponíveis
-Para que eu possa escolher itens para comprar.
+Cenário 2: Senhas não correspondem
 
-Critérios de Aceitação
+Dado que estou na tela de cadastro
+E informo senhas diferentes
+Quando tento concluir o cadastro
+Então o sistema deve mostrar uma mensagem de erro.
 
-O sistema deve mostrar nome, preço, imagem e descrição do produto.
+História 3: Visualizar Áreas Disponíveis
 
-O usuário deve conseguir filtrar ou pesquisar produtos.
+Como morador
+Quero visualizar as áreas disponíveis (quadras ou campo)
+Para escolher onde realizar minha reserva.
 
-Ao clicar no produto, o sistema deve abrir a página de detalhes.
+Cenário 1: Exibição das áreas
 
-🧺 3️⃣ Adicionar produto ao carrinho
+Dado que estou na tela de reservas
+Quando acesso a listagem de áreas
+Então devo visualizar opções como:
 
-História de Usuário
+Quadra de Tênis
 
-Como cliente
-Eu quero adicionar produtos ao carrinho
-Para que eu possa finalizar a compra depois.
+Quadra Poliesportiva
 
-Critérios de Aceitação
+Campo de Futebol
 
-O usuário pode clicar no botão “Adicionar ao carrinho”.
+História 4: Escolher Data da Reserva
 
-O sistema deve atualizar o contador de itens no carrinho.
+Como morador
+Quero selecionar uma data no calendário
+Para agendar minha reserva.
 
-O produto deve aparecer na tela do carrinho com quantidade e preço.
+Cenário 1: Seleção da data
 
-💳 4️⃣ Finalizar compra
+Dado que estou na tela de agendamento
+Quando escolho uma data disponível
+Então a data selecionada deve ficar destacada.
 
-História de Usuário
+História 5: Escolher Horário
 
-Como cliente
-Eu quero finalizar a compra dos produtos no carrinho
-Para que eu possa receber os produtos no meu endereço.
+Como morador
+Quero selecionar um horário disponível
+Para definir quando utilizarei a área reservada.
 
-Critérios de Aceitação
+Cenário 1: Horário disponível
 
-O sistema deve permitir selecionar forma de pagamento.
+Dado que já selecionei uma data
+Quando escolho um horário livre
+Então esse horário deve ser destacado.
 
-O usuário deve informar ou selecionar um endereço de entrega.
+Cenário 2: Horário indisponível
 
-Após confirmação, o sistema deve gerar um pedido com número de identificação.
+Dado que já selecionei uma data
+E existem horários já ocupados
+Quando visualizo a lista de horários
+Então os horários indisponíveis devem aparecer desativados.
 
-📦 5️⃣ Acompanhar pedido
+História 6: Confirmar Reserva
 
-História de Usuário
+Como morador
+Quero confirmar minha reserva
+Para garantir o uso da área selecionada.
 
-Como cliente
-Eu quero acompanhar o status do meu pedido
-Para que eu saiba quando o produto será entregue.
+Cenário 1: Confirmação da reserva
 
-Critérios de Aceitação
+Dado que escolhi a área, a data e o horário
+Quando clico no botão “Confirmar”
+Então a reserva deve ser registrada
+E exibida na tela de confirmação.
 
-O sistema deve mostrar status como:
+História 7: Visualizar Reserva Confirmada
 
-Pedido confirmado
+Como morador
+Quero visualizar os detalhes da minha reserva
+Para acompanhar meus agendamentos.
 
-Em processamento
+Cenário 1: Exibição da reserva
 
-Em transporte
+Dado que já tenho uma reserva realizada
+Quando acesso a tela de confirmação
+Então devo visualizar as seguintes informações:
 
-Entregue
+Área reservada
 
-O usuário deve acessar essa informação na tela de pedidos.
+Data
 
-👨‍💼 6️⃣ Gerenciar produtos (Administrador)
+Horário
 
-História de Usuário
+Nome do morador
 
-Como administrador do sistema
-Eu quero cadastrar e editar produtos
-Para que a loja mantenha o catálogo atualizado.
+História 8: Criar Nova Reserva
 
-Critérios de Aceitação
+Como morador
+Quero iniciar uma nova reserva
+Para agendar outro horário.
 
-O administrador pode:
+Cenário 1: Iniciar nova reserva
 
-adicionar produto
-
-editar produto
-
-remover produto
-
-O sistema deve exigir nome, preço, descrição e imagem.
+Dado que estou na tela de confirmação da reserva
+Quando clico no botão “Nova Reserva”
+Então devo retornar ao fluxo de agendamento.
